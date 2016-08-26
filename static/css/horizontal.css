@@ -1,0 +1,792 @@
+ /*
+1. document properties
+2. sections
+3. header and navigation
+4. content
+5. typografy
+6. parallax
+ */
+
+ html, body{
+        height: 100%;/*fallback*/
+        height: 100vh;
+        min-width: calc(200vw + 480px);
+        max-width: 400vw;
+        font-family: 'Roboto', arial;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        text-align: center;
+      }
+
+
+
+header{
+	width: 112px;
+}
+
+.navbar-bottom{
+	position: absolute;
+	bottom: 20px;
+}
+
+#nav-phone{
+	width: 56px;
+}
+
+/* 2. sections */
+section{
+	height: 100vh;
+	float: left;
+}
+
+.w-50{
+	width:50vw;
+}
+
+.w-50-res{
+	width:50vw;
+}
+
+@media screen and (max-width: 1000px) {
+	.w-50-res{
+	width:50vw;
+}
+}
+
+
+@media screen and (max-width: 570px) {
+	.w-50-res{
+	width:100vw;
+}
+}
+
+
+@media screen and (max-width: 470px) {
+	.w-50-res{
+	width:110vw;
+}
+}
+
+.w-90{
+	width:90vw;
+}
+.w-100{
+	width: 100vw;
+}
+
+
+.homesection{
+	background: rgba(10,10,10,0.4) url('../images/first-section.jpg');
+	background-blend-mode: multiply;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+
+/*не кроссбраузерно*/
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+	padding-top: 200px;
+
+}
+
+#ourteam{
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+}
+
+
+/* 3. menu */
+.navbar-brand{
+	background-image: url('../images/logo2.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 64px;
+	height: 90px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	position: relative;
+	z-index: 10;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+.navbar-transparent{
+	background-color: rgba(50,50,50,.7);
+	color: white;
+}
+
+.navbar-fixed-top .navbar-nav > li > a{
+	transition: .2s;
+	padding-right: 25px;
+}
+.navbar-fixed-top .navbar-nav > li > a:focus{
+	color: forestgreen;
+}
+
+
+.navbar-fixed-top .navbar-nav > li > a:hover{
+	background: transparent;
+	cursor: pointer;
+	color: #a4c939;
+}
+
+.navbar-fixed-top .navbar-nav > li > a:active{
+	background: transparent;
+	color: #60731f;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+ .navbar-center{
+
+ }
+
+
+ /* 4. content classes  */
+ .bold{
+ 	font-weight: 600;
+ }
+
+ .center-content {
+ 	max-width: 400px;
+ 	max-height: 400px;
+
+ }
+ .color-white{
+ 	color: white;
+ }
+
+ #home-article{
+ 	text-align: center;
+ }
+
+.center-up-content{
+	max-width: 600px;
+	max-height: 400px;
+	margin: 0 auto;
+}
+
+.down-50{
+	margin-top: 50px;
+}
+
+.down-100{
+	margin-top: 100px;
+}
+
+.bottom-50{
+	margin-bottom: 50px;
+}
+
+/*   Вторая секция    */
+.white{
+	color: white;
+}
+
+#contact{
+	background-image: url('../images/background1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#tree-components{
+	max-width:700px;
+	margin: 0 auto; 
+	display: flex;
+	justify-content: center;
+}
+
+#tree-components ul{
+	list-style: none;
+	font-size: 21px;
+}
+
+#tree-components ul li a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+.component{
+	width: 122px;
+	height: 122px;
+	border: 2px solid #3d3d3d;
+	margin: 10px;
+	float: left;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .3s;
+}
+
+.component:before {
+    content:'';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+    background-position: 15% 85%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.component:hover {
+    border-color: #a5ca39;
+    background-color: #a5ca39;
+    color:white;
+    font-weight: bold;
+}
+.component:hover:before {
+    background-color: #a5ca39;
+    border-color: #a5ca39;
+}
+
+#second-component{
+	margin-top: 130px;
+}
+
+.rotate45{
+	transform: rotate(45deg);
+}
+
+.rotate-45{
+	transform: rotate(-45deg);
+}
+
+.component-text{
+}
+
+
+/*               форма             */
+
+#form-wrapper{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width: 300px;
+	height: 300px;
+    margin: 0 auto;
+}
+
+.fw2{
+	margin: 110px auto;
+	    width: 310px
+}
+
+@media screen and (min-width: 1023px){
+	#form-wrapper{
+		border: 2px solid #3d3d3d;
+	}
+	/*  белая дыра в бордере формы  */
+	#form-wrapper::before {
+    	content: " ";
+    	position: absolute;
+    	top: -3px;
+    	left: 70px;
+    	background-color: transparent;
+    	width: 160px;
+    	height: 4px;
+	}
+
+	@keyframes spinNscale {
+	   0% {    transform: rotate(0deg) scale(1);}
+	   100%{   transform: rotateZ(180deg) scale(10);}
+	}
+	#form-wrapper:hover .back-animation{
+	  animation: spinNscale 1s linear;
+	  animation-iteration-count: 1;
+	  animation-fill-mode: forwards;
+	  background: rgba(141,198,63, 0.5);
+	  opacity: 1;
+	}
+
+}
+
+.preform-text{
+	position: relative;
+    left: -50px;
+        top: 7px;
+}
+
+
+
+/* анимация при наведении на форму */
+.back-animation{
+  opacity: 0;
+  width:10%;
+  height: 10%;
+  background-color: rgba(141,198,63, 0.6);
+  position:relative;
+  left:45%;
+  top:-43%;
+  margin:0px;
+    z-index:-1;
+}
+
+@-moz-document url-prefix(){
+	.back-animation{
+  		top:-32%;
+	}
+}
+
+.none-animation{
+	width:10%;
+  height: 10%;
+  display: none;
+}
+
+#form-wrapper .form-input::-moz-placeholder{
+	color: #333333;
+}
+
+#form-wrapper .form-input::-webkit-input-placeholder{
+	color: #333333;
+}
+#form-wrapper .form-input::placeholder{
+	color: #333333;
+}
+
+#form-wrapper:hover .form-input::-moz-placeholder{
+	color: #333333;
+}
+
+#form-wrapper:hover .form-input::-webkit-input-placeholder{
+	color: #333333;
+}
+#form-wrapper:hover .form-input::placeholder{
+	color: #333333;
+}
+
+#form-wrapper:hover .form-input:focus::-moz-placeholder{
+	color: #333333;
+}
+
+#form-wrapper:hover .form-input:focus::-webkit-input-placeholder{
+	color: black;
+}
+#form-wrapper:hover .form-input:focus::placeholder{
+	color: black;
+}
+
+
+/* сами инпуты */
+#contact-form{
+  position: relative;
+    top: -20px;
+    left: 21px;
+}
+
+.form-input{
+	background: transparent;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 2px solid #3d3d3d;
+	margin-top:5px;
+}
+/* убираем рамку инпута при фокусе */
+input[type="text"]:focus { outline: none; }
+/* для submit-кнопки */
+.black-btn {
+    color: white;
+    background-color: #3d3d3d;
+    margin-top: 10px;
+    border-radius: 0px;
+    padding: 8px;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 11px;
+}
+
+
+.black-btn:hover {
+    color: white;
+    background-color: #3a3737;
+}
+
+/* слайдер проектов */
+#project-slider{
+	background: rgba(30,30,30,0.4);
+	width: 100vw;
+	max-width: 480px;
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+}
+
+#pholio-title{
+	background: #00BCD4;
+	color: white;
+	text-align: center;
+	font-family: Roboto;
+	font-size: 36px;
+	height: 12vh;
+	vertical-align: center;
+	line-height: 12vh;
+}
+
+#project-slider ul{
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+
+@media screen and (min-width: 1023px){
+.scew45{
+	transform: skewX(-45deg);
+}
+.scew45-only{
+	transform: skewX(-45deg);
+}
+.scew45-only > *{
+	transform: skewX(45deg);
+}
+}
+
+
+.project{
+	height: 44vh;
+	width: 100%;
+	list-style: none;
+	cursor: pointer;
+
+
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	overflow: hidden;
+	transition: .8s;
+}
+
+.project01 .project-content{
+	background: rgba(20,20,20,.3) url('../images/pholio/1.jpg');
+}
+
+.project02 .project-content{
+	background: rgba(20,20,20,.3) url('../images/pholio/2.png');
+}
+
+.project-content{
+	background: rgba(20,20,20,.3) url('../images/first-section.jpg');
+	background-size: cover !important;
+	height: 100%;
+}
+
+.project:hover{
+	-webkit-filter: none;
+	-moz-filter: none;
+	-o-filter: none;
+	filter: none;
+}
+
+
+/* четвёртая секция */
+#section4{
+	background: rgba(255,255,255,0.3) url('../images/thrd.png');
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -40px 0px;
+	width: 95vw;
+
+	display: flex;
+}
+
+.third-content{
+	max-width: 700px;
+    margin: 242px auto;
+}
+
+
+/* пятая секция */
+.f-content{
+	max-width: 1400px;
+    margin: 100px auto;
+    height: 100vh;
+}
+
+
+
+#price-section{
+	background-image: url('../images/section5.png');
+	background-color: rgba(250,250,250,0.3);
+	background-blend-mode: multiply;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -40px 0px;
+	width: 95vw;
+	min-width: 1400px;
+	margin-left: -3vw;
+	
+}
+
+
+/* контейнер с ценами */
+#price{
+	width: 1220px;
+	margin: 0px auto;
+	/*margin-bottom: 40px;*/
+}
+
+
+/* ценник */
+.price{
+	background: url('../images/rombus.png');
+	background-size: cover;
+	width: 380px;
+	height: 380px;
+	float:left;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.price-list{
+	text-align: left;
+	margin: 0 auto;
+	max-width: 200px;
+}
+
+.price-desc{
+	max-width:200px;
+	margin: 0 auto;
+}
+
+.price-light{
+	position: relative;
+	top:100px;
+	left: 100px;
+}
+
+.price-medium:after{
+	position: relative;
+	bottom: -108px;
+	/*margin-left: -190px;*/
+	font-size: 21px;
+	content: 'Благодаря нашей гибкой системе вы можете подобрать оптимальный тариф для вашего бизнеса';
+	width: 415px;
+	text-transform: uppercase;
+}
+
+.price-hard{
+	position: relative;
+	top:100px;
+	right: 100px;
+	clear: right;
+}
+
+/* Кнопка заказа */
+.price-button{
+	width: 64px;
+	height: 79px;
+	position: relative;
+	background-color: #333333;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.price-light .price-button{
+	bottom: -27px;
+}
+
+.price-medium .price-button{
+	left: 187%;
+	bottom: -27px;
+}
+
+.price-hard .price-button{
+	
+	bottom: -27px;
+}
+
+
+.price-button p{
+	color: white;
+	transform: rotate(-45deg);
+	font-size: 14px;
+	margin-top: 6px;
+}
+
+
+
+/* секция 6 с нашей командой */
+
+.slider-content{
+	background-color: darkgray;
+	border-radius: 50%;
+}
+
+
+#team-slider{
+	margin-top: 100px;
+	max-width: 800px;
+}
+ /* 5. typografy */
+
+ @font-face {
+  font-family: Roboto-thin;
+  src: url(../fonts/roboto/Roboto-Thin.ttf);
+}
+
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+ #home-article h1{
+ 	font-weight: 100;
+    font-size: 36pt;
+ }
+
+ .lh30{
+ 	line-height: 30px;
+ }
+
+.thin-text{
+	font-family: Roboto-thin, sans-serif;
+	font-weight: 100;
+}
+
+.center-text{
+	text-align: center;
+}
+
+.no-margin{
+	margin: 0px;
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.txt-12{
+	font-size: 11px;
+}
+
+.team-header{
+
+}
+
+
+/* слайдер */
+.slide-content-x{
+	width: 240px;
+	height: 240px;
+	margin-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slick-center .slide-content-x{
+	width: 300px;
+	height: 300px;
+	margin-top: -35px;
+	margin-right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slick-slide {
+    display: block;
+    margin: 50px;
+}
+
+
+/* кнопки снизу */
+.bottom-buttons{
+	position: relative;
+	bottom: 20px;
+
+}
+
+.big-black-button{
+	background: #333333;
+	color:white;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 22px;
+	padding-right: 22px;
+	margin-right: 50px;
+	border-radius: 0px;
+}
+
+.big-black-button:hover{
+	background: #111111;
+	color:white;
+}
+
+
+
+/* последняя секция */
+#last-section{
+	background: #888888;
+	width: 50vw;
+	 display: flex;
+    justify-content: flex-end;
+    /* align-content: flex-end; */
+    align-items: flex-end;
+}
+
+@media (min-width: 1023px){
+	#last-section{
+		margin-left: -500px;
+	}
+}
+
+.a-contacts{
+	position: relative;
+	bottom: 10px;
+}
+
+.last-menu{
+	color:white;
+}
+
+.last-menu{
+	list-style: none;
+	text-transform: uppercase;
+	line-height: 2;
+	text-align: left;
+}
+
+.last-menu li:hover a{
+	color: white;
+}
+
+
+.last-cont{
+	color: white;
+}
+
+
+/* то, что ниже, нужно переписать */
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+	.price-medium .price-button {
+    	left: 206% !important;
+   		bottom: -27px;
+	}
+}
+
+@media (max-width: 900){
+	#last-section{
+		display: none;
+	}
+}
+
